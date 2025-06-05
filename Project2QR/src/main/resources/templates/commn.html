@@ -1,0 +1,103 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛있는지갑 - Header & Footer</title>
+    <link rel="stylesheet" href="commn.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../static/img/logo.png" alt="맛있는지갑 로고">
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="맛집을 검색해보세요...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="auth-buttons">
+                <button class="auth-btn">Login</button>
+                <button class="auth-btn primary">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+ 
+
+    
+    <!-- 플로팅 버튼 -->
+    <div class="floating-button" id="floatingBtn">
+        <img src="logo.png" alt="회사 로고" onerror="this.style.display='none';">
+    </div>
+
+    <!-- 메뉴 팝업 오버레이 -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- 메뉴 팝업 -->
+    <div class="menu-popup" id="menuPopup">
+        <div class="menu-popup-header">
+            <button class="close-btn" id="closeBtn">×</button>
+            
+            <div class="character-section">
+                <div class="character-info">
+                    <div class="character-name">맛있는  지갑<br>MAT-JI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-bar">
+            <div class="menu-popup-content">
+                <!-- QR 코드 섹션 -->
+                <div class="qr-section">
+                            
+                    
+                    <div class="qr-placeholder">
+                        QR 코드가<br>여기에<br>표시됩니다
+                    </div>
+                </div>
+
+                <!-- 메뉴 리스트 -->
+                <div class="menu-list">
+                <div class="menu-item" onclick="handleMenuClick('예약')">예약</div>
+                    <div class="menu-item" onclick="handleMenuClick('좋아하는 매장')">좋아하는 매장</div>
+                    <div class="menu-item" onclick="handleMenuClick('방문했던 매장')">방문했던 매장</div>
+                    <div class="menu-item" onclick="handleMenuClick('방문예정 매장')">방문예정 매장</div>
+                </div>
+            </div>
+        </div>
+
+       
+            
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="company-info">
+                <strong>㈜ 맛있는지갑</strong><br>
+                대표 : 김효정<br>
+                주소 : 부산 북구 화명신도시로 100, 999동 9999호<br>
+                사업자등록번호 : 123-45-67891<br>
+                통신판매업 신고번호 : 2025-부산북구-1111호<br>
+                개인정보담당 : gywjd7378@naver.com<br>
+                대표번호 : 051-1234-5678<br><br>
+                (주)맛있는지갑은 통신판매중개자이며 통신판매의 당사자가 아닙니다.<br>
+                (주)맛있는지갑은 예약 및 구매관련 통신판매업자가 제공하는 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">서비스 이용약관</a>
+                <a href="#" class="footer-link">개인정보 처리방침</a>
+                <a href="#" class="footer-link">위치정보 이용약관</a>
+                <a href="#" class="footer-link">입점 문의</a>
+                <a href="#" class="footer-link">광고/제휴 문의</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="commn.js"></script>
+</script>
+</body>
+</html>
+
