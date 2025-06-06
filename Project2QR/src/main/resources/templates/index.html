@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>맛있는지갑 - Header & Footer</title>
     <link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
@@ -71,6 +72,50 @@
        
             
     </div>
+	
+<!--	Home_main-->
+<main class="main-content">
+       <!-- Navigation -->
+       <div class="nav-section">
+           <nav class="nav-tabs">
+               <a href="#" class="nav-tab">NEW</a>
+               <a href="#" class="nav-tab">BEST</a>
+               <a href="#" class="nav-tab">지역</a>
+               <a href="#" class="nav-tab">카테고리</a>
+               <a href="#" class="nav-tab">공지사항</a>
+           </nav>
+       </div>
+               
+       <div class="content-panels">
+           <div class="left-panel">
+               <h2 class="question-text">자사 광고 & 배너?</h2>
+           </div>
+           
+           <div class="right-panel">
+               <div class="map-container">
+                   <div class="map-content">
+                       <div class="map-roads">
+                           <div class="road road-1"></div>
+                           <div class="road road-2"></div>
+                       </div>
+                       
+                       <div class="building-icons">
+                           <div class="building building-1"></div>
+                           <div class="building building-2"></div>
+                           <div class="building building-3"></div>
+                           <div class="building building-4"></div>
+                       </div>
+                       
+                       <div class="location-pin"></div>
+                   </div>
+                   
+                   <div class="map-labels">
+                       📍 현재 위치
+                   </div>
+               </div>
+           </div>
+       </div>
+   </main>
 
 <!--     Footer -->
     <footer class="footer">
@@ -97,7 +142,45 @@
     </footer>
 
     <script src="js/common.js"></script>
-</script>
+	<script>
+		document.querySelectorAll('.nav-tab').forEach(tab => {
+		    tab.addEventListener('click', function(e) {
+		        const tabName = this.dataset.tab;
+		        alert(`"${tabName}" 탭이 클릭되었습니다.`);
+		    });
+		});
+	    // 네비게이션 탭 기능
+		document.querySelectorAll('.nav-tab').forEach(tab => {
+	        tab.addEventListener('click', function(e) {
+	            e.preventDefault();
+	            
+	            // 모든 탭에서 active 클래스 제거
+	            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+	            
+	            // 클릭된 탭에 active 클래스 추가
+	            this.classList.add('active');
+	        });
+	    });
+
+	    // 간단한 인터랙션 효과
+	    document.querySelector('.left-panel').addEventListener('mouseenter', function() {
+	        this.style.transform = 'scale(1.02)';
+	        this.style.transition = 'transform 0.3s ease';
+	    });
+
+	    document.querySelector('.left-panel').addEventListener('mouseleave', function() {
+	        this.style.transform = 'scale(1)';
+	    });
+
+	    document.querySelector('.right-panel').addEventListener('mouseenter', function() {
+	        this.style.transform = 'scale(1.02)';
+	        this.style.transition = 'transform 0.3s ease';
+	    });
+
+	    document.querySelector('.right-panel').addEventListener('mouseleave', function() {
+	        this.style.transform = 'scale(1)';
+	    });
+	</script>
 </body>
 </html>
 
